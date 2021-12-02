@@ -1,6 +1,7 @@
 sdk-version: 1.15.0
-name: token
+name: setup
 source: daml
+init-script: Main:setup
 parties:
   - Alice
   - Bob
@@ -14,3 +15,4 @@ dependencies:
   - daml-prim
   - daml-stdlib
   - daml-script
+  - ../token/.daml/dist/token-0.0.1.dar
