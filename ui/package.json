@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@daml.js/daml-ui-template-0.0.1": "file:../token/daml.js/token-0.0.1",
-    "@daml/hub-react": "^0.3.0",
+    "@daml/hub-react": "1.0.0-rc.5",
     "@daml/ledger": "1.17.1",
     "@daml/react": "1.17.1",
     "@daml/types": "1.17.1",
