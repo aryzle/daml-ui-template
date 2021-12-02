@@ -48,7 +48,7 @@ const UserProvider : React.FC = ({ children }) => {
   const party = localStorage.getItem(damlPartyKey);
   const token = localStorage.getItem(damlTokenKey);
 
-  let initState : UserState = (!!party && !!token) ? { isAuthenticated : true, token, party } : { isAuthenticated : false };
+  const initState : UserState = (!!party && !!token) ? { isAuthenticated : true, token, party } : { isAuthenticated : false };
   const [state, dispatch] = React.useReducer<React.Reducer<UserState,LoginAction>>(userReducer, initState);
 
   return (
@@ -110,8 +110,8 @@ const loginDablUser = () => {
 }
 
 function signOut(dispatch : React.Dispatch<LoginAction>, history : History) {
-  localStorage.removeItem("daml.party");
-  localStorage.removeItem("daml.token");
+  localStorage.removeItem(damlPartyKey);
+  localStorage.removeItem(damlTokenKey);
 
   dispatch({ type: "SIGN_OUT_SUCCESS" });
   history.push("/login");
