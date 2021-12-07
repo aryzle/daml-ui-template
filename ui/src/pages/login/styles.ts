@@ -45,7 +45,8 @@ export default makeStyles((theme : any) => createStyles({
     fontSize: 18,
   },
   dablLoginButton: {
-    marginBottom: theme.spacing(2)
+    marginBottom: theme.spacing(2),
+    marginTop: theme.spacing(2)
   },
   errorMessage: {
     textAlign: "center",
@@ -70,8 +71,26 @@ export default makeStyles((theme : any) => createStyles({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
+    marginBottom: theme.spacing(2)
   },
   loginLoader: {
     marginLeft: theme.spacing(4),
   },
+  customFileUpload: {
+    height: "44px",
+    width: "100%",
+    margin: 0,
+    cursor: "pointer",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "flex-start",
+    alignSelf: "flex-end",
+    borderRadius: "4px",
+    "& input[type='file']": {
+      display: "none"
+    }
+  },
+  partySelect: {
+    width: "100%"
+  }
 }));
